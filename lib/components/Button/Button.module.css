@@ -1,11 +1,49 @@
 .defaultButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--yui-gap);
   width: fit-content;
+  height: 2rem;
   padding: 0.25rem;
+  color: var(--yui-foreground);
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: var(--yui-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.1s;
+}
+
+@media (hover: hover) {
+  .defaultButton:hover:not(:disabled) {
+    filter: var(--yui-onHover);
+  }
+}
+
+.isLoadingButton {
+  opacity: 60%;
+  cursor: progress;
+}
+
+.defaultButton:disabled {
+  cursor: not-allowed;
+  filter: grayscale(100%);
+  opacity: 60%;
+}
+
+.defaultButton:active:not(:disabled) {
+  transform: scale(105%);
 }
 
 .primaryButton {
-  background-color: coral;
+  background-color: var(--yui-accent);
+}
+
+.secondaryButton {
+  background-color: var(--yui-secondary);
 }
 .outlineButton {
-  border: 2px solid coral;
+  background-color: transparent;
+  border: 2px solid var(--yui-accent);
 }
