@@ -1,0 +1,11 @@
+.defaultButton {
+  width: fit-content;
+  padding: 0.25rem;
+}
+
+.primaryButton {
+  background-color: coral;
+}
+.outlineButton {
+  border: 2px solid coral;
+}
