@@ -1,0 +1,17 @@
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+html, body {
+    color: #eee;
+    background-color: #181818;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
