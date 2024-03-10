@@ -1,0 +1,20 @@
+
+
+:root {
+    /* Colors */
+    --yui-accent: #8884FF;
+    --yui-primary: #181616;
+    --yui-secondary: #212123;
+    --yui-foreground: #EBE5E1;
+
+
+    --yui-colors-green:#3DDC97;
+ 
+    --yui-colors-darkgreen:#5C946E;
+
+
+    /* Consts */
+    --yui-radius: 0.5rem;
+    --yui-gap: 0.25rem;
+    --yui-onHover: brightness(120%);
+}
