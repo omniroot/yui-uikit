@@ -22,4 +22,7 @@
     --yui-radius: 0.5rem;
     --yui-gap: 0.25rem;
     --yui-onHover: brightness(120%);
+    --yui-padding-small: 0.25rem;
+    --yui-padding-normal: 0.45rem;
+    --yui-padding-big: 0.65rem;
 }
