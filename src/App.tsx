@@ -1,6 +1,7 @@
 import { Button } from "lib";
 import styles from "./App.module.css";
 import { Spinner } from "lib/components/Spinner/Spinner";
+import { Input } from "lib/components/Input/Input";
 
 function App() {
   const onClickHandler = () => {
@@ -23,6 +24,8 @@ function App() {
       <Spinner variant="standart" />
       {/* <Loader variant="fullscreen" /> */}
 
+      <span>Input:</span>
+      <Input />
       
     </div>
   );
