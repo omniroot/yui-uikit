@@ -18,7 +18,7 @@ function App() {
       <Button onClick={onClickHandler} variant="outline">outline</Button>
       <Button onClick={onClickHandler} variant="outline" loading>outline</Button>
       <Button onClick={onClickHandler} variant="outline" disabled>outline</Button>
-
+{/* from test branch */}
       <Spinner variant="small" />
       <Spinner variant="standart" />
       {/* <Loader variant="fullscreen" /> */}
