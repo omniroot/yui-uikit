@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, FC, HTMLAttributes } from "react";
 import styles from "./Button.module.css";
 import clsx from "clsx";
-import { Loader } from "lib/components/Loader/Loader";
+import { Spinner } from "lib/components/Spinner/Spinner";
 
 interface ButtonProps
   extends DetailedHTMLProps<
@@ -28,9 +28,9 @@ export const Button: FC<ButtonProps> = ({
   });
 
   return (
-    <button {...rest} className={_class} disabled={disabled || isLoading}>
-      {isLoading && <Loader variant="small"/>}
-      <span style={isLoading ? {opacity: 0.8} : {opacity: 1}}>
+    <button {...rest} className={_class} disabled={disabled || loading}>
+      {loading && <Spinner variant="small"/>}
+      <span style={loading ? {opacity: 0.8} : {opacity: 1}}>
 
       {children}
       </span>

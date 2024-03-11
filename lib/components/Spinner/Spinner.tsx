@@ -1,5 +1,5 @@
-import LoaderIcon from "./loader.svg?react"
-import styles from './Loader.module.css'
+import SpinnerIcon from "./spinner.svg?react"
+import styles from './Spinner.module.css'
 import {  FC } from "react"
 import clsx from "clsx"
 
@@ -7,13 +7,13 @@ import clsx from "clsx"
 interface SpinerProps {
     variant?: "small" | "standart" | "fullscreen"
 }
-export const Loader: FC<SpinerProps> = ({variant}) => {
+export const Spinner: FC<SpinerProps> = ({variant}) => {
     const _class = clsx(styles.defaultSpiner, {
         [styles.smallSpiner]: variant === "small",
         [styles.standartSpiner]: variant === "standart",
         [styles.fullscreenSpiner]: variant === "fullscreen"
     }) 
     return (
-        <LoaderIcon className={_class}/>
+        <SpinnerIcon className={_class}/>
     )
 }

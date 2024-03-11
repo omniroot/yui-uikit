@@ -1,6 +1,6 @@
 import { Button } from "lib";
 import styles from "./App.module.css";
-import { Loader } from "lib/components/Loader/Loader";
+import { Loader } from "lib/components/Spinner/Loader";
 
 function App() {
   const onClickHandler = () => {
