@@ -9,6 +9,13 @@ function App() {
   }
   return (
     <div className={styles.App}>
+      <span>Text:</span>
+      <span style={{color: "var(--yui-color-lightgray)"}}>text</span>
+      <span style={{color: "var(--yui-color-gray)"}}>text 2</span>
+      <span style={{color: "var(--yui-color-darkgray)"}}>text 3</span>
+      <span style={{color: "var(--yui-color-lightgreen)"}}>text 3</span>
+      <span style={{color: "var(--yui-color-green)"}}>text 3</span>
+      <span style={{color: "var(--yui-color-darkgreen)"}}>text 3</span>
       <span>Preview:</span>
       <Button onClick={onClickHandler} variant="primary">primary</Button>
       <Button onClick={onClickHandler} variant="primary" loading>primary</Button>

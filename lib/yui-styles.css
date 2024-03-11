@@ -2,15 +2,20 @@
 
 :root {
     /* Colors */
-    --yui-accent: #8884FF;
-    --yui-primary: #181616;
-    --yui-secondary: #212123;
-    --yui-foreground: #EBE5E1;
+    --yui-color-accent: #8884FF;
+    --yui-color-primary: #181616;
+    --yui-color-secondary: #212123;
 
 
-    --yui-colors-green:#3DDC97;
+    --yui-color-white: #f8f9fa;
+    --yui-color-gray: #9c9c9c;
+    --yui-color-darkgray: hsla(152,85%,100%,0.32);
+    --yui-color-darkedgray: hsla(152,85%,100%,0.09);
+    
+--yui-color-lightgreen: #74c69d;
+    --yui-color-green:#3DDC97;
  
-    --yui-colors-darkgreen:#5C946E;
+    --yui-color-darkgreen:#5C946E;
 
 
     /* Consts */
