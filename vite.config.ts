@@ -23,6 +23,7 @@ export default defineConfig({
       formats: ["es"],
     },
     minify: "esbuild",
+    copyPublicDir: false,
     outDir: path.resolve(__dirname, "dist"),
     rollupOptions: {
       external: ["react", "react/jsx-runtime"],
