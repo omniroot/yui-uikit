@@ -1,0 +1,15 @@
+
+
+.defaultInput {
+    height: 1.9rem;
+    color: var(--yui-foreground);
+    font-size: 0.9em;
+    border: 2px solid var(--yui-accent);
+    border-radius: var(--yui-radius);
+    background-color: transparent;
+    outline: none;
+}
+
+.defaultInput::placeholder {
+    color: var(--yui-secondary);
+} 
