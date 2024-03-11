@@ -1,6 +1,6 @@
 import { Button } from "lib";
 import styles from "./App.module.css";
-import { Loader } from "lib/components/Spinner/Loader";
+import { Spinner } from "lib/components/Spinner/Spinner";
 
 function App() {
   const onClickHandler = () => {
@@ -19,9 +19,11 @@ function App() {
       <Button onClick={onClickHandler} variant="outline" loading>outline</Button>
       <Button onClick={onClickHandler} variant="outline" disabled>outline</Button>
 
-      <Loader variant="small" />
-      <Loader variant="standart" />
+      <Spinner variant="small" />
+      <Spinner variant="standart" />
       {/* <Loader variant="fullscreen" /> */}
+
+      
     </div>
   );
 }
