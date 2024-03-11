@@ -32,7 +32,8 @@ function App() {
       {/* <Loader variant="fullscreen" /> */}
 
       <span>Input:</span>
-      <Input />
+      <Input onChangeCallback={(text) => console.log("chnage:", text)} />
+      <Input symbolCount={false}/>
       
     </div>
   );
