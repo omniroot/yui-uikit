@@ -3,22 +3,25 @@ import styles from "./App.module.css";
 import { Loader } from "lib/components/Loader/Loader";
 
 function App() {
+  const onClickHandler = () => {
+    alert(1)
+  }
   return (
     <div className={styles.App}>
       <span>Preview:</span>
-      <Button variant="primary">primary</Button>
-      <Button variant="primary" isLoading>primary</Button>
-      <Button variant="primary" disabled>primary</Button>
-      <Button variant="secondary">secondary</Button>
-      <Button variant="secondary" isLoading>secondary</Button>
-      <Button variant="secondary" disabled>secondary</Button>
-      <Button variant="outline">outline</Button>
-      <Button variant="outline" isLoading>outline</Button>
-      <Button variant="outline" disabled>outline</Button>
+      <Button onClick={onClickHandler} variant="primary">primary</Button>
+      <Button onClick={onClickHandler} variant="primary" loading>primary</Button>
+      <Button onClick={onClickHandler} variant="primary" disabled>primary</Button>
+      <Button onClick={onClickHandler} variant="secondary">secondary</Button>
+      <Button onClick={onClickHandler} variant="secondary" loading>secondary</Button>
+      <Button onClick={onClickHandler} variant="secondary" disabled>secondary</Button>
+      <Button onClick={onClickHandler} variant="outline">outline</Button>
+      <Button onClick={onClickHandler} variant="outline" loading>outline</Button>
+      <Button onClick={onClickHandler} variant="outline" disabled>outline</Button>
 
       <Loader variant="small" />
       <Loader variant="standart" />
-      <Loader variant="fullscreen" />
+      {/* <Loader variant="fullscreen" /> */}
     </div>
   );
 }

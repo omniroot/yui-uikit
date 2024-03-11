@@ -9,11 +9,11 @@ interface ButtonProps
     HTMLButtonElement
   > {
   variant?: "primary" | "secondary" |"outline";
-  isLoading?: boolean;
+  loading?: boolean;
 }
 export const Button: FC<ButtonProps> = ({
   variant = "primary",
-  isLoading = false,
+  loading = false,
   disabled = false,
   className,
   children,
@@ -23,12 +23,12 @@ export const Button: FC<ButtonProps> = ({
     [styles.primaryButton]: variant === "primary",
     [styles.secondaryButton]: variant === "secondary",
     [styles.outlineButton]: variant === "outline",
-    [styles.isLoadingButton]: isLoading === true,
+    [styles.isLoadingButton]: loading === true,
     [styles.disabledButton]: disabled === true
   });
 
   return (
-    <button {...rest} className={_class} disabled={disabled}>
+    <button {...rest} className={_class} disabled={disabled || isLoading}>
       {isLoading && <Loader variant="small"/>}
       <span style={isLoading ? {opacity: 0.8} : {opacity: 1}}>
 
