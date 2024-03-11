@@ -1,15 +1,37 @@
+.defaultForm {
+  width: 100%;
+  height: 2.5rem;
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 var(--yui-padding-normal);
+
+  margin: 0;
+  border: 2px solid var(--yui-color-accent);
+  border-radius: var(--yui-radius);
+}
 
 .defaultInput {
-    height: 1.9rem;
-    color: var(--yui-foreground);
-    font-size: 0.9em;
-    border: 2px solid var(--yui-accent);
-    border-radius: var(--yui-radius);
-    background-color: transparent;
-    outline: none;
+  width: 100%;
+  height: 100%;
+  color: var(--yui-color-white);
+  font-size: 0.9em;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin: 0;
+
+  padding: 0;
 }
 
 .defaultInput::placeholder {
-    color: var(--yui-secondary);
-} 
+  color: var(--yui-color-gray);
+}
+
+
+.symbolCount {
+    color: var(--yui-color-gray);
+    font-size: 0.8em;
+    font-weight: 600;
+}
