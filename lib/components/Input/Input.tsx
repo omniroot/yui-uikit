@@ -64,7 +64,9 @@ export const Input: FC<InputProps> = ({
         {...rest}
       />
       {symbolCount && (
-        <span className={styles.symbolCount}>{value.length} {rest.maxLength && `/ ${rest.maxLength}`}</span>
+        <span className={styles.symbolCount}>
+          {value.length} {rest.maxLength && `/ ${rest.maxLength}`}
+        </span>
       )}
     </form>
   );

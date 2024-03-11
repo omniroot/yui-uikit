@@ -8,7 +8,7 @@ interface ButtonProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  variant?: "primary" | "secondary" |"outline";
+  variant?: "primary" | "secondary" | "outline";
   loading?: boolean;
 }
 export const Button: FC<ButtonProps> = ({
@@ -24,15 +24,14 @@ export const Button: FC<ButtonProps> = ({
     [styles.secondaryButton]: variant === "secondary",
     [styles.outlineButton]: variant === "outline",
     [styles.isLoadingButton]: loading === true,
-    [styles.disabledButton]: disabled === true
+    [styles.disabledButton]: disabled === true,
   });
 
   return (
     <button {...rest} className={_class} disabled={disabled || loading}>
-      {loading && <Spinner variant="small"/>}
-      <span style={loading ? {opacity: 0.8} : {opacity: 1}}>
-
-      {children}
+      {loading && <Spinner variant="small" />}
+      <span style={loading ? { opacity: 0.8 } : { opacity: 1 }}>
+        {children}
       </span>
     </button>
   );

@@ -12,7 +12,9 @@
   border-radius: var(--yui-radius);
   font-weight: 600;
   cursor: pointer;
-  transition: filter 0.2s, transform 0.1s;
+  transition:
+    filter 0.2s,
+    transform 0.1s;
 }
 
 @media (hover: hover) {

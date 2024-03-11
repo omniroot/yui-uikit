@@ -29,9 +29,8 @@
   color: var(--yui-color-gray);
 }
 
-
 .symbolCount {
-    color: var(--yui-color-gray);
-    font-size: 0.8em;
-    font-weight: 600;
+  color: var(--yui-color-gray);
+  font-size: 0.8em;
+  font-weight: 600;
 }
