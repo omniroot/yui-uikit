@@ -1,28 +1,28 @@
-
+* {
+  box-sizing: border-box;
+}
 
 :root {
-    /* Colors */
-    --yui-color-accent: #8884FF;
-    --yui-color-primary: #181616;
-    --yui-color-secondary: #212123;
+  /* Colors */
+  --yui-color-accent: #8884ff;
+  --yui-color-primary: #181616;
+  --yui-color-secondary: #212123;
 
+  --yui-color-white: #f8f9fa;
+  --yui-color-gray: #9c9c9c;
+  --yui-color-darkgray: hsla(152, 85%, 100%, 0.32);
+  --yui-color-darkedgray: hsla(152, 85%, 100%, 0.09);
 
-    --yui-color-white: #f8f9fa;
-    --yui-color-gray: #9c9c9c;
-    --yui-color-darkgray: hsla(152,85%,100%,0.32);
-    --yui-color-darkedgray: hsla(152,85%,100%,0.09);
-    
---yui-color-lightgreen: #74c69d;
-    --yui-color-green:#3DDC97;
- 
-    --yui-color-darkgreen:#5C946E;
+  --yui-color-lightgreen: #74c69d;
+  --yui-color-green: #3ddc97;
 
+  --yui-color-darkgreen: #5c946e;
 
-    /* Consts */
-    --yui-radius: 0.5rem;
-    --yui-gap: 0.25rem;
-    --yui-onHover: brightness(120%);
-    --yui-padding-small: 0.25rem;
-    --yui-padding-normal: 0.45rem;
-    --yui-padding-big: 0.65rem;
+  /* Consts */
+  --yui-radius: 0.5rem;
+  --yui-gap: 0.25rem;
+  --yui-onHover: brightness(120%);
+  --yui-padding-small: 0.25rem;
+  --yui-padding-normal: 0.45rem;
+  --yui-padding-big: 0.65rem;
 }
