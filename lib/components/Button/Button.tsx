@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, FC, HTMLAttributes } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps, FC } from "react";
 import styles from "./Button.module.css";
 import clsx from "clsx";
 import { Spinner } from "lib/components/Spinner/Spinner";
