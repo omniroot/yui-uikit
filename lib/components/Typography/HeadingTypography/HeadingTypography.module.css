@@ -1,0 +1,13 @@
+.headingContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 2.2rem;
+	padding: var(--yui-padding-small);
+}
+
+.headingTypographyDefault {
+	color: var(--yui-color-accent);
+	font-weight: bold;
+}

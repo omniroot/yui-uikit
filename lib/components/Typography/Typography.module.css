@@ -1,0 +1,22 @@
+.typographyDefault {
+	font-size: var(--yui-text-size-1);
+}
+
+.typographySize1 {
+	font-size: var(--yui-text-size-1);
+}
+.typographySize2 {
+	font-size: var(--yui-text-size-2);
+}
+.typographySize3 {
+	font-size: var(--yui-text-size-3);
+}
+.typographySize4 {
+	font-size: var(--yui-text-size-4);
+}
+.typographySize5 {
+	font-size: var(--yui-text-size-5);
+}
+.typographySize6 {
+	font-size: var(--yui-text-size-6);
+}
