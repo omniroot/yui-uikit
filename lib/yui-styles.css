@@ -26,8 +26,12 @@
 	--yui-padding-normal: 0.45rem;
 	--yui-padding-big: 0.65rem;
 
-	--text-size-1: 1.1em;
-	--text-size-2: 1em;
-	--text-size-3: 0.9em;
-	--text-size-4: 0.8em;
+	--yui-text-size-1: 1.5rem;
+	--yui-text-size-2: 1.2em;
+	--yui-text-size-3: 1em;
+	--yui-text-size-4: 0.8em;
+	--yui-text-size-5: 0.6em;
+	--yui-text-size-6: 0.5em;
+
+	font-family: "Open Sans", sans-serif;
 }
