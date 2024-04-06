@@ -1,0 +1,10 @@
+.defaultFab {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	min-width: 3rem;
+	min-height: 3rem;
+}
