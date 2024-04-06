@@ -5,6 +5,7 @@ import { Input } from "lib/components/Input/Input"
 import { Typography } from "lib/components/Typography/Typography"
 import { IconButton } from "lib/components/IconButton/IconButton"
 import { Linkedin } from "lucide-react"
+import { Checkbox } from "lib/components/Checkbox/Checkbox"
 
 function App() {
 	const onClickHandler = () => {
@@ -72,6 +73,10 @@ function App() {
 			<IconButton onClick={() => alert("Icon Button Clicked!")}>
 				<Linkedin />
 			</IconButton>
+			<span>Checkbox:</span>
+			<Checkbox onChangeCallback={() => console.log("checkbox changed")}>
+				I accept privacy police
+			</Checkbox>
 		</div>
 	)
 }
