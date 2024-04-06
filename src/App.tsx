@@ -3,6 +3,8 @@ import styles from "./App.module.css"
 import { Spinner } from "lib/components/Spinner/Spinner"
 import { Input } from "lib/components/Input/Input"
 import { Typography } from "lib/components/Typography/Typography"
+import { IconButton } from "lib/components/IconButton/IconButton"
+import { Linkedin } from "lucide-react"
 
 function App() {
 	const onClickHandler = () => {
@@ -65,6 +67,11 @@ function App() {
 				onSubmit={(text) => console.log("submit:", text)}
 			/>
 			<Input symbolCount={false} />
+
+			<span>IconButton</span>
+			<IconButton onClick={() => alert("Icon Button Clicked!")}>
+				<Linkedin />
+			</IconButton>
 		</div>
 	)
 }
