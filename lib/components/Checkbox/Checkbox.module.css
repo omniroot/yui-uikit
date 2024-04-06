@@ -1,0 +1,35 @@
+.checkboxContainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--yui-gap);
+}
+
+.htmlCheckbox {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.defaultCheckbox {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: 2px solid var(--yui-color-accent);
+	border-radius: var(--yui-radius);
+	cursor: pointer;
+	user-select: none;
+}
+
+.defaultCheckbox svg {
+	transition: opacity 0.2s;
+	opacity: 0;
+}
+
+.defaultCheckboxChecked svg {
+	opacity: 1;
+}
