@@ -1,0 +1,6 @@
+.defaultIconButton {
+	display: flex;
+	padding: var(--yui-padding-normal);
+	justify-content: center;
+	align-items: center;
+}
