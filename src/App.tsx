@@ -4,8 +4,9 @@ import { Spinner } from "lib/components/Spinner/Spinner"
 import { Input } from "lib/components/Input/Input"
 import { Typography } from "lib/components/Typography/Typography"
 import { IconButton } from "lib/components/IconButton/IconButton"
-import { Linkedin } from "lucide-react"
 import { Checkbox } from "lib/components/Checkbox/Checkbox"
+import { FAB } from "lib/components/FAB/FAB"
+import { Medal, Linkedin } from "lucide-react"
 
 function App() {
 	const onClickHandler = () => {
@@ -13,6 +14,7 @@ function App() {
 	}
 	return (
 		<div className={styles.App}>
+			<FAB onClick={() => console.log("fab clicked")}>{<Medal />}</FAB>
 			<span>Text:</span>
 			<Typography size="h1">typography 1</Typography>
 			<Typography size="h2">typography 2</Typography>
