@@ -60,7 +60,10 @@ function App() {
 			{/* <Loader variant="fullscreen" /> */}
 
 			<span>Input:</span>
-			<Input onChangeCallback={(text) => console.log("chnage:", text)} />
+			<Input
+				onChangeCallback={(text) => console.log("chnage:", text)}
+				onSubmit={(text) => console.log("submit:", text)}
+			/>
 			<Input symbolCount={false} />
 		</div>
 	)
