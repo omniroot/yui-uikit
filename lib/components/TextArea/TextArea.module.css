@@ -1,0 +1,9 @@
+.defaultTextArea {
+	color: var(--yui-color-foreground);
+	padding: var(--yui-padding-normal);
+	font-size: var(--yui-text-size-2);
+	background-color: transparent;
+	border: 2px solid var(--yui-color-accent);
+	border-radius: var(--yui-radius);
+	outline: none;
+}
