@@ -7,6 +7,7 @@
 	--yui-color-accent: #8884ff;
 	--yui-color-primary: #181616;
 	--yui-color-secondary: #212123;
+	--yui-color-foreground: var(--yui-color-white);
 
 	--yui-color-white: #f8f9fa;
 	--yui-color-gray: #9c9c9c;
