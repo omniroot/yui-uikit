@@ -7,6 +7,7 @@ import { IconButton } from "lib/components/IconButton/IconButton"
 import { Checkbox } from "lib/components/Checkbox/Checkbox"
 import { FAB } from "lib/components/FAB/FAB"
 import { Medal, Linkedin } from "lucide-react"
+import { TextArea } from "lib/components/TextArea/TextArea"
 
 function App() {
 	const onClickHandler = () => {
@@ -70,7 +71,8 @@ function App() {
 				onSubmit={(text) => console.log("submit:", text)}
 			/>
 			<Input symbolCount={false} />
-
+			<span>textarea:</span>
+			<TextArea>123</TextArea>
 			<span>IconButton</span>
 			<IconButton onClick={() => alert("Icon Button Clicked!")}>
 				<Linkedin />
