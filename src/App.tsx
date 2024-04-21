@@ -9,6 +9,7 @@ import { FAB } from "lib/components/FAB/FAB"
 import { Medal, Linkedin, Menu } from "lucide-react"
 import { TextArea } from "lib/components/TextArea/TextArea"
 import { Header } from "lib/components/Header/Header"
+import { ColorPicker } from "lib/components/ColorPicker/ColorPicker"
 
 function App() {
 	const onClickHandler = () => {
@@ -90,6 +91,9 @@ function App() {
 			<Checkbox onChangeCallback={() => console.log("checkbox changed")}>
 				I accept privacy police
 			</Checkbox>
+			<span style={{ display: "flex" }}>
+				colorpicker :<ColorPicker />
+			</span>
 		</div>
 	)
 }
