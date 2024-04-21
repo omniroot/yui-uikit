@@ -6,8 +6,9 @@ import { Typography } from "lib/components/Typography/Typography"
 import { IconButton } from "lib/components/IconButton/IconButton"
 import { Checkbox } from "lib/components/Checkbox/Checkbox"
 import { FAB } from "lib/components/FAB/FAB"
-import { Medal, Linkedin } from "lucide-react"
+import { Medal, Linkedin, Menu } from "lucide-react"
 import { TextArea } from "lib/components/TextArea/TextArea"
+import { Header } from "lib/components/Header/Header"
 
 function App() {
 	const onClickHandler = () => {
@@ -15,6 +16,14 @@ function App() {
 	}
 	return (
 		<div className={styles.App}>
+			<Header
+				leftSlot={<Typography size="h2">Yui-kit</Typography>}
+				rightSlot={
+					<Button>
+						<Menu />
+					</Button>
+				}
+			/>
 			<FAB onClick={() => console.log("fab clicked")}>{<Medal />}</FAB>
 			<span>Text:</span>
 			<Typography size="h1">typography 1</Typography>
