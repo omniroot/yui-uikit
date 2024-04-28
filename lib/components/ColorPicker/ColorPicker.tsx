@@ -30,33 +30,33 @@ export const ColorPicker: FC<ColorPickerProps> = ({
 		setColor(value)
 	}
 	return (
-		<>
+		<div className={styles.colorPickerContainer}>
 			<span
 				className={styles.defaultPreviewColorPicker}
 				style={{ backgroundColor: color }}
 				onClick={toggleColorPickerOpened}
 			></span>
 			{isColorPickerOpen && (
-				<Portal>
-					<div className={_class}>
-						<div
-							className={styles.previewColor}
-							style={{ backgroundColor: color }}
-						>
-							<Typography size="h2">{color}</Typography>
-						</div>
-						{/* <div className={styles.colorsPalette}>
+				// <Portal>
+				<div className={_class}>
+					<div
+						className={styles.previewColor}
+						style={{ backgroundColor: color }}
+					>
+						<Typography size="h2">{color}</Typography>
+					</div>
+					{/* <div className={styles.colorsPalette}>
               <div></div>
             </div> */}
-						<Input
-							placeholder={defaultColor}
-							defaultValue={defaultColor}
-							symbolCount={false}
-							onChangeCallback={onInputHexColorChange}
-						/>
-					</div>
-				</Portal>
+					<Input
+						placeholder={defaultColor}
+						defaultValue={defaultColor}
+						symbolCount={false}
+						onChangeCallback={onInputHexColorChange}
+					/>
+				</div>
+				// </Portal>
 			)}
-		</>
+		</div>
 	)
 }
