@@ -6,10 +6,11 @@ import { Typography } from "lib/components/Typography/Typography"
 import { IconButton } from "lib/components/IconButton/IconButton"
 import { Checkbox } from "lib/components/Checkbox/Checkbox"
 import { FAB } from "lib/components/FAB/FAB"
-import { Medal, Linkedin, Menu } from "lucide-react"
+import { Medal, Linkedin, Menu, MenuIcon } from "lucide-react"
 import { TextArea } from "lib/components/TextArea/TextArea"
 import { Header } from "lib/components/Header/Header"
 import { ColorPicker } from "lib/components/ColorPicker/ColorPicker"
+import { Popup } from "lib/components/Popup/Popup"
 
 function App() {
 	const onClickHandler = () => {
@@ -94,6 +95,10 @@ function App() {
 			<span style={{ display: "flex" }}>
 				colorpicker :<ColorPicker />
 			</span>
+			<span>Popup</span>
+			<Popup listItems={[<span>123</span>, <span>345</span>]}>
+				<MenuIcon />
+			</Popup>
 		</div>
 	)
 }
