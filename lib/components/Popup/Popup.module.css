@@ -5,7 +5,7 @@
 .popupButton {
 }
 
-.popupElements {
+.defaultPopupElements {
 	position: absolute;
 	top: 1.5rem;
 	left: 1.5rem;
@@ -16,4 +16,14 @@
 
 .popupElement {
 	background-color: green;
+}
+
+.positionLeft {
+	top: 1.5rem;
+	left: -2.5rem;
+}
+
+.positionRight {
+	top: 1.5rem;
+	left: 1.5rem;
 }

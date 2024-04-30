@@ -1,5 +1,6 @@
 import { DetailedHTMLProps, FC, useState } from "react"
 import styles from "./Popup.module.css"
+import clsx from "clsx"
 
 interface PopupProps
 	extends DetailedHTMLProps<
@@ -7,10 +8,20 @@ interface PopupProps
 		HTMLDivElement
 	> {
 	listItems?: React.ReactNode[]
+	position?: "left" | "right"
 }
 
-export const Popup: FC<PopupProps> = ({ listItems, children }) => {
+export const Popup: FC<PopupProps> = ({
+	listItems,
+	position = "right",
+	className,
+	children,
+}) => {
 	const [isOpen, setIsOpen] = useState(false)
+	const _class = clsx(styles.defaultPopupElements, className, {
+		[styles.positionLeft]: position === "left",
+		[styles.positionRight]: position === "right",
+	})
 
 	const onPopupButtonClick = () => {
 		setIsOpen((prev) => !prev)
@@ -22,7 +33,7 @@ export const Popup: FC<PopupProps> = ({ listItems, children }) => {
 				{children}
 			</div>
 			{isOpen && (
-				<div className={styles.popupElements}>
+				<div className={_class}>
 					{listItems?.map((ell) => {
 						return <div className={styles.popupElement}>{ell}</div>
 					})}
