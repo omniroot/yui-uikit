@@ -96,7 +96,7 @@ function App() {
 				colorpicker :<ColorPicker />
 			</span>
 			<span>Popup</span>
-			<Popup listItems={[<span>123</span>, <span>345</span>]}>
+			<Popup listItems={[<span>123</span>, <span>345</span>]} position="left">
 				<MenuIcon />
 			</Popup>
 		</div>
