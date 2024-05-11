@@ -21,9 +21,15 @@ function App() {
 			<Header
 				leftSlot={<Typography size="h2">Yui-kit</Typography>}
 				rightSlot={
-					<Button>
-						<Menu />
-					</Button>
+					<Popup
+						listItems={[
+							<span onClick={() => alert(123)}>123</span>,
+							<span onClick={() => alert(345)}>345</span>,
+						]}
+						position="left"
+					>
+						<MenuIcon />
+					</Popup>
 				}
 			/>
 			<FAB onClick={() => console.log("fab clicked")}>{<Medal />}</FAB>
@@ -96,7 +102,13 @@ function App() {
 				colorpicker :<ColorPicker />
 			</span>
 			<span>Popup</span>
-			<Popup listItems={[<span>123</span>, <span>345</span>]} position="left">
+			<Popup
+				listItems={[
+					<span onClick={() => alert(123)}>123</span>,
+					<span onClick={() => alert(345)}>345</span>,
+				]}
+				position="right"
+			>
 				<MenuIcon />
 			</Popup>
 		</div>
