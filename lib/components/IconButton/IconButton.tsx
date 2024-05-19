@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import { ButtonHTMLAttributes, DetailedHTMLProps, FC } from "react"
 import styles from "./IconButton.module.css"
-import { Button } from "lib/components/Button"
+import { Button } from "../Button/Button"
 
 interface IconButtonProps
 	extends DetailedHTMLProps<

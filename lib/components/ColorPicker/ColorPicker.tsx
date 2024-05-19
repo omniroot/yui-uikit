@@ -3,7 +3,6 @@ import { FC, useState } from "react"
 import styles from "./ColorPicker.module.css"
 import { Input } from "lib/components/Input/Input"
 import { Typography } from "lib/components/Typography/Typography"
-import { Portal } from "lib/components/Portal/Portal"
 
 interface ColorPickerProps
 	extends React.DetailedHTMLProps<

@@ -12,9 +12,9 @@ interface IProps
 }
 
 export const TextArea: FC<IProps> = ({
-	onChangeCallback,
+	// onChangeCallback,
 	// onSubmitCallback,
-	symbolCount = true,
+	// symbolCount = true,
 	placeholder = "Placeholder",
 	children,
 	className,

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react"
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react"
 import typographyStyles from "../Typography.module.css"
 import styles from "./HeadingTypography.module.css"
 import clsx from "clsx"

@@ -1,6 +1,6 @@
-import { ReactNode } from "react"
+import { FC, ReactNode } from "react"
 import { createPortal } from "react-dom"
 
-export const Portal = ({ children }: { children: ReactNode }) => {
+export const Portal: FC<any> = ({ children }: { children: ReactNode }) => {
 	return <div>{createPortal(children, document.body)}</div>
 }

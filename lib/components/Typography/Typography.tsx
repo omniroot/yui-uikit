@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import { HeadingTypography } from "lib/components/Typography/HeadingTypography/HeadingTypography"
-import { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react"
+import { ButtonHTMLAttributes, DetailedHTMLProps } from "react"
 import styles from "./Typography.module.css"
 
 interface TypographyProps
