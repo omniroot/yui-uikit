@@ -8,7 +8,7 @@ interface ButtonProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "transparent";
   loading?: boolean;
 }
 export const Button: FC<ButtonProps> = ({
@@ -23,6 +23,7 @@ export const Button: FC<ButtonProps> = ({
     [styles.primaryButton]: variant === "primary",
     [styles.secondaryButton]: variant === "secondary",
     [styles.outlineButton]: variant === "outline",
+    [styles.transparentButton]: variant === "transparent",
     [styles.isLoadingButton]: loading === true,
     [styles.disabledButton]: disabled === true,
   });
