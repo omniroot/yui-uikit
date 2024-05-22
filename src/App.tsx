@@ -118,9 +118,10 @@ function App() {
       >
         <MenuIcon />
       </Popup>
+      { !isModal && <FAB onClick={toggleModal}/>}
+      { isModal && <Modal titleSlot={"Add task"} rightSlot={<Button variant="outline" onClick={toggleModal}>Cancel</Button>} closeCallback={toggleModal}>123</Modal>}
     </div>
   );
 }
 
-export default App;
 export default App;
