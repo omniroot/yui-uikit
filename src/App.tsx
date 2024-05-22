@@ -91,6 +91,8 @@ function App() {
       <Input
         onChangeCallback={(text) => console.log("chnage:", text)}
         onSubmit={(text) => console.log("submit:", text)}
+				autoFocus
+
       />
       <Input symbolCount={false} />
       <span>textarea:</span>
@@ -116,30 +118,9 @@ function App() {
       >
         <MenuIcon />
       </Popup>
-      {!isModal && <FAB onClick={toggleModal}>{<Medal />}</FAB>}
-      {isModal && (
-        <Modal
-          closeCallback={toggleModal}
-          titleSlot={<Typography>Add task</Typography>}
-          rightSlot={
-            <Button variant="secondary" onClick={toggleModal}>
-              X
-            </Button>
-          }
-          position="bottom"
-        >
-          <Typography size="h3">Title:</Typography>
-          <Input placeholder="title" />
-          <Typography size="h3">Description:</Typography>
-          <Input placeholder="description" />
-          <Typography size="h3">Tags:</Typography>
-          <Input placeholder="tags (separate by comma)" />
-          <div style={{ width: "100%", marginLeft: "50%" }}></div>
-          <Button style={{ width: "100%", textAlign: "center" }}>Add</Button>
-        </Modal>
-      )}
     </div>
   );
 }
 
+export default App;
 export default App;
