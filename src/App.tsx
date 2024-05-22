@@ -92,6 +92,7 @@ function App() {
         onChangeCallback={(text) => console.log("chnage:", text)}
         onSubmit={(text) => console.log("submit:", text)}
 				autoFocus
+        initialValue="Hello"
 
       />
       <Input symbolCount={false} />

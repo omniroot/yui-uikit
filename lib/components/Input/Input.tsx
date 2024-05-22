@@ -17,16 +17,18 @@ interface InputProps
   > {
   onChangeCallback?: (text: string) => void;
   onSubmitCallback?: (text: string) => void;
+  initialValue?: string
   symbolCount?: boolean;
 }
 export const Input: FC<InputProps> = ({
   onChangeCallback,
   onSubmitCallback,
   symbolCount = true,
+  initialValue = "",
   placeholder = "Placeholder",
   ...rest
 }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(initialValue);
   const inputRef = useRef<HTMLInputElement>(null);
   const _class = clsx(styles.defaultInput);
 

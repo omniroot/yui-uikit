@@ -31,9 +31,7 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button {...rest} className={_class} disabled={disabled || loading}>
       {loading && <Spinner variant="small" />}
-      <span style={loading ? { opacity: 0.8 } : { opacity: 1 }}>
         {children}
-      </span>
     </button>
   );
 };

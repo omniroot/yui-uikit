@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react"
+import { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react"
 import typographyStyles from "../Typography.module.css"
 import styles from "./HeadingTypography.module.css"
 import clsx from "clsx"
@@ -12,11 +12,11 @@ interface HeadingTypographyProps
 	rightSlot?: ReactNode
 }
 
-export const HeadingTypography = ({
+export const HeadingTypography: FC<HeadingTypographyProps> = ({
 	children,
 	rightSlot,
 	...rest
-}: HeadingTypographyProps) => {
+}) => {
 	const _class = clsx(
 		styles.headingTypographyDefault,
 		typographyStyles.typographySize2
