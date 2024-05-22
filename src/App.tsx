@@ -90,7 +90,7 @@ function App() {
         onChangeCallback={(text) => console.log("chnage:", text)}
         onSubmit={(text) => console.log("submit:", text)}
 				autoFocus
-				
+
       />
       <Input symbolCount={false} />
       <span>textarea:</span>
