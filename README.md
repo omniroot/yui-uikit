@@ -13,7 +13,11 @@
 ## Todo
 
 - 0.2.2 version:
-  - [ ]
+  - [x] Now button use inherit font
+  - [x] Rewrite Popup component
+  - [x] Update Readme
+  - [x] add BaseComponent Type
+  - [x] Update preview for Popup
 
 ## Changelog
 
