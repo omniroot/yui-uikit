@@ -6,7 +6,14 @@ import { Typography } from "lib/components/Typography/Typography";
 import { IconButton } from "lib/components/IconButton/IconButton";
 import { Checkbox } from "lib/components/Checkbox/Checkbox";
 import { FAB } from "lib/components/FAB/FAB";
-import { Medal, Linkedin, MenuIcon } from "lucide-react";
+import {
+  Medal,
+  Linkedin,
+  MenuIcon,
+  Home,
+  PersonStanding,
+  DoorClosed,
+} from "lucide-react";
 import { TextArea } from "lib/components/TextArea/TextArea";
 import { Header } from "lib/components/Header/Header";
 import { ColorPicker } from "lib/components/ColorPicker/ColorPicker";
@@ -29,8 +36,19 @@ function App() {
         rightSlot={
           <Popup
             listItems={[
-              <span onClick={() => alert(123)}>123</span>,
-              <span onClick={() => alert(345)}>345</span>,
+              {
+                id: "1",
+                icon: <Home size={"24px"} />,
+                title: "Home",
+                onClick: () => {
+                  alert("Go home!");
+                },
+              },
+              {
+                id: "2",
+                icon: <DoorClosed size={"24px"} />,
+                title: "Logout",
+              },
             ]}
             position="left"
           >
@@ -91,9 +109,7 @@ function App() {
       <Input
         onChangeCallback={(text) => console.log("chnage:", text)}
         onSubmit={(text) => console.log("submit:", text)}
-				autoFocus
         initialValue="Hello"
-
       />
       <Input symbolCount={false} />
       <span>textarea:</span>
@@ -111,16 +127,25 @@ function App() {
       </span>
       <span>Popup</span>
       <Popup
-        listItems={[
-          <span onClick={() => alert(123)}>123</span>,
-          <span onClick={() => alert(345)}>345</span>,
-        ]}
+        listItems={[{ id: "1", icon: <Home />, title: "Home" }]}
         position="right"
       >
         <MenuIcon />
       </Popup>
-      { !isModal && <FAB onClick={toggleModal}/>}
-      { isModal && <Modal titleSlot={"Add task"} rightSlot={<Button variant="outline" onClick={toggleModal}>Cancel</Button>} closeCallback={toggleModal}>123</Modal>}
+      {!isModal && <FAB onClick={toggleModal} />}
+      {isModal && (
+        <Modal
+          titleSlot={"Add task"}
+          rightSlot={
+            <Button variant="outline" onClick={toggleModal}>
+              Cancel
+            </Button>
+          }
+          closeCallback={toggleModal}
+        >
+          123
+        </Modal>
+      )}
     </div>
   );
 }
