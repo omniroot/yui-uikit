@@ -48,6 +48,9 @@ function App() {
                 id: "2",
                 icon: <DoorClosed size={"24px"} />,
                 title: "Logout",
+                onClick: () => {
+                  console.log("Logout!");
+                },
               },
             ]}
             position="left"
