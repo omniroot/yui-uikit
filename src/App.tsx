@@ -41,7 +41,7 @@ function App() {
                 icon: <Home size={"24px"} />,
                 title: "Home",
                 onClick: () => {
-                  alert("Go home!");
+                  console.log("Go home!");
                 },
               },
               {
