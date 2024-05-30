@@ -1,8 +1,20 @@
+import { useTasks } from "@/utils/useTasks";
 import styles from "./App.module.css";
-import { Button, Header, Popup, Typography } from "lib";
-import { DoorClosed, Home, MenuIcon } from "lucide-react";
+import { Button, Header, Input, Popup, Typography } from "lib";
+import { DoorClosed, Home, MenuIcon, X } from "lucide-react";
+import { Task } from "@/components/Task/Task";
+import { useState } from "react";
+import { Modal } from "lib/components/Modal/Modal";
 
 function App() {
+  const { tasks, addTask, deleteTask, toggleTaskComplete, editTask } =
+    useTasks();
+  // console.log("tasks", tasks);
+
+  const _addTestTask = () => {
+    addTask({ title: "Test task", completed: false, tags: ["test"] });
+  };
+
   return (
     <div className={styles.App}>
       <Header
@@ -33,7 +45,20 @@ function App() {
           </Popup>
         }
       />
-      <Button>press</Button>
+      <Button onClick={_addTestTask}>Add test task</Button>
+      {tasks.map((task) => {
+        return (
+          <div>
+            <Task
+              task={task}
+              onDeleteCallback={() => deleteTask(task.id)}
+              onToggleCompleteCallback={() => toggleTaskComplete(task.id)}
+              onEditCallback={editTask}
+              key={task.id}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
