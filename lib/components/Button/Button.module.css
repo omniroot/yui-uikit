@@ -37,7 +37,7 @@
 }
 
 .defaultButton:active:not(:disabled) {
-  transform: scale(105%);
+  filter: none;
 }
 
 .primaryButton {
