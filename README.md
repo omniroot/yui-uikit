@@ -14,13 +14,13 @@
 
 - Todo:
 
-  - [ ] add the ID to the popup component, do a check (if the popup is already open) to avoid 2 or more open popups
-
 - 0.3.0 version:
   - [x] add BaseComponent Type
   - [x] add relative width nad height from content size
   - [x] add onClick animation in Button
   - [ ] add notification (alert) component
+  - [ ] add auto close popup after click
+  - [ ] add the ID to the popup component, do a check (if the popup is already open) to avoid 2 or more open popups
   - [x] Refactoring Popup component
   - [x] Rename titleSlot to title in modal component
   - [x] fix button font, now it use inherit font
