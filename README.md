@@ -12,15 +12,20 @@
 
 ## Todo
 
-- 0.2.2 version:
-  - [x] Now button use inherit font
-  - [x] Rewrite Popup component
-  - [x] Update Readme
+- Todo:
+
+  - [ ] add the ID to the popup component, do a check (if the popup is already open) to avoid 2 or more open popups
+
+- 0.3.0 version:
   - [x] add BaseComponent Type
-  - [x] Update preview for Popup
+  - [x] add relative width nad height from content size
+  - [x] add onClick animation in Button
+  - [ ] add notification (alert) component
+  - [x] Refactoring Popup component
+  - [x] Rename titleSlot to title in modal component
+  - [x] fix button font, now it use inherit font
   - [x] fix button width
   - [x] fix position for popup
-  - [x] add relative width nad height from content size
 
 ## Changelog
 
