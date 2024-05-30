@@ -18,6 +18,9 @@
   - [x] Update Readme
   - [x] add BaseComponent Type
   - [x] Update preview for Popup
+  - [x] fix button width
+  - [x] fix position for popup
+  - [x] add relative width nad height from content size
 
 ## Changelog
 
