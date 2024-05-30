@@ -41,13 +41,10 @@
 	/* background-color: red; */
 }
 
-/* .positionLeft {
-	bottom: 0;
-	left: -5rem;
+.positionLeft {
+	right: 0;
 }
 
 .positionRight {
-	bottom: 0;
-
-	right: 0;
-} */
+	left: 0;
+}
