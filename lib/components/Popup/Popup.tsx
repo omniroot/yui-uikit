@@ -53,9 +53,9 @@ export const Popup: FC<PopupProps> = ({
               ? {
                   width: width,
                   height: height,
-                  right: 0,
+                  // right: 0,
                 }
-              : { width: width, height: height, left: 0 }
+              : { width: width, height: height }
           }
         >
           {listItems.map((ell) => {
