@@ -5,11 +5,12 @@
   top: 0;
   left: 0;
   background-color: var(--yui-color-modalbackground);
+  z-index: 10000;
 }
 
 .modal {
   position: absolute;
-  
+
   width: 90%;
   height: max-content;
   background-color: var(--yui-color-secondary);
@@ -18,18 +19,18 @@
 }
 
 .positionTop {
-    top: 0%;
-    left: 50%;
-    translate: -50% 10%;
+  top: 0%;
+  left: 50%;
+  translate: -50% 10%;
 }
 
 .positionCenter {
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 .positionBottom {
-    bottom: 0;
-    left: 50%;
-    translate: -50% -10%;
+  bottom: 0;
+  left: 50%;
+  translate: -50% -10%;
 }
