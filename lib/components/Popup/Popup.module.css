@@ -27,6 +27,7 @@
   padding: var(--yui-padding-normal);
   gap: var(--yui-gap);
   cursor: pointer;
+  z-index: 10001;
 }
 
 .popupElement:hover {
