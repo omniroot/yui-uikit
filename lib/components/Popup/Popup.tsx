@@ -32,14 +32,21 @@ export const Popup: FC<PopupProps> = ({
     [styles.positionRight]: position === "right",
   });
 
-  const onPopupButtonClick = () => {
+  const _togglePopup = () => {
     setIsOpen((prev) => !prev);
+  };
+
+  const _onPopupElementClick = (item: PopupListItem) => {
+    if (item.onClick) {
+      item.onClick();
+      _togglePopup();
+    }
   };
 
   return (
     <div className={styles.popupContainer}>
       <Button
-        onClick={onPopupButtonClick}
+        onClick={_togglePopup}
         variant="transparent"
         className={styles.popupButton}
       >
@@ -64,7 +71,7 @@ export const Popup: FC<PopupProps> = ({
                 className={styles.popupElement}
                 variant="transparent"
                 key={ell.id}
-                onClick={ell.onClick}
+                onClick={() => _onPopupElementClick(ell)}
               >
                 {ell.icon} {ell.title}
               </Button>
