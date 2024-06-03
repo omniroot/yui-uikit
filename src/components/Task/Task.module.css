@@ -14,3 +14,12 @@
 .more {
   margin-left: auto;
 }
+.editmodal {
+  display: flex;
+  flex-direction: column;
+  padding: var(--yui-padding-normal);
+  gap: var(--yui-gap);
+}
+
+.save {
+}
