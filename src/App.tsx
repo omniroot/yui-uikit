@@ -1,15 +1,12 @@
-import { useTasks } from "@/utils/useTasks";
 import styles from "./App.module.css";
 import { Button, Header, Input, Popup, Typography } from "lib";
 import { DoorClosed, Home, MenuIcon, X } from "lucide-react";
 import { Task } from "@/components/Task/Task";
-import { useState } from "react";
-import { Modal } from "lib/components/Modal/Modal";
+import { useGlobalStore } from "@/store/store";
 
 function App() {
-  const { tasks, addTask, deleteTask, toggleTaskComplete, editTask } =
-    useTasks();
-  // console.log("tasks", tasks);
+  const tasks = useGlobalStore((state) => state.tasks);
+  const addTask = useGlobalStore((state) => state.addTask);
 
   const _addTestTask = () => {
     addTask({ title: "Test task", completed: false, tags: ["test"] });
@@ -47,17 +44,7 @@ function App() {
       />
       <Button onClick={_addTestTask}>Add test task</Button>
       {tasks.map((task) => {
-        return (
-          <div>
-            <Task
-              task={task}
-              onDeleteCallback={() => deleteTask(task.id)}
-              onToggleCompleteCallback={() => toggleTaskComplete(task.id)}
-              onEditCallback={editTask}
-              key={task.id}
-            />
-          </div>
-        );
+        return <Task task={task} key={task.id} />;
       })}
     </div>
   );
