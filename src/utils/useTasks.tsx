@@ -1,78 +1,50 @@
-import { generateUUID } from "@/utils/generateUuid";
-import { useEffect, useState } from "react";
+// export const useTasks = () => {
+//   const [tasks, setTasks] = useState<ITasks>(previusTasksState);
+//   useEffect(() => {
+//     if (tasks) {
+//
+//       console.log("Auto save tasks to LocalStorage!");
+//     }
+//   }, [tasks]);
 
-export interface ITask {
-  id: string;
-  title?: string;
-  completed?: boolean;
-  tags?: string[];
-}
-export type ITaskWithoutId = Omit<ITask, "id">;
+//   const addTask = (newTask: ITaskWithoutId) => {
+//     setTasks((prev) => [...prev, { ...newTask, id: generateUUID() }]);
+//     console.log("Task added!", newTask);
+//   };
 
-export type ITasks = ITask[];
+//   const deleteTask = (taskId: string) => {
+//     setTasks((prev) => prev.filter((task) => task.id !== taskId));
+//     console.log("Task removed!", taskId);
+//   };
 
-let previusTasksState: ITasks;
+//   const editTask = (newTask: ITask) => {
+//     setTasks((prev) =>
+//       prev.map((task) => {
+//         if (task.id == newTask.id) {
+//           return newTask;
+//         } else {
+//           return task;
+//         }
+//       })
+//     );
+//     console.log("Task edited!", newTask);
+//   };
 
-if (!localStorage.getItem("firstStart")) {
-  localStorage.setItem("firstStart", "false");
-  localStorage.setItem("tasks", "[]");
-  previusTasksState = [];
-  console.log("FirstStart is: ", localStorage.getItem("firstStart"));
-}
-if (localStorage.getItem("firstStart") === "false") {
-  const _tempTasks: ITasks = JSON.parse(localStorage.getItem("tasks") || "[]");
-  if (_tempTasks) {
-    previusTasksState = _tempTasks;
-  }
-}
+//   const toggleTaskComplete = (taskId: string) => {
+//     setTasks((prev) =>
+//       prev.map((task) => {
+//         if (task.id == taskId) {
+//           return { ...task, completed: !task.completed };
+//         } else {
+//           return task;
+//         }
+//       })
+//     );
+//     console.log("Task completed state changed!", taskId);
+//   };
 
-export const useTasks = () => {
-  const [tasks, setTasks] = useState<ITasks>(previusTasksState);
-  useEffect(() => {
-    if (tasks) {
-      saveTaskToLocalStorage();
-      console.log("Auto save tasks to LocalStorage!");
-    }
-  }, [tasks]);
-
-  const addTask = (newTask: ITaskWithoutId) => {
-    setTasks((prev) => [...prev, { ...newTask, id: generateUUID() }]);
-    console.log("Task added!", newTask);
-  };
-
-  const deleteTask = (taskId: string) => {
-    setTasks((prev) => prev.filter((task) => task.id !== taskId));
-    console.log("Task removed!", taskId);
-  };
-
-  const editTask = (newTask: ITask) => {
-    setTasks((prev) =>
-      prev.map((task) => {
-        if (task.id == newTask.id) {
-          return newTask;
-        } else {
-          return task;
-        }
-      })
-    );
-    console.log("Task edited!", newTask);
-  };
-
-  const toggleTaskComplete = (taskId: string) => {
-    setTasks((prev) =>
-      prev.map((task) => {
-        if (task.id == taskId) {
-          return { ...task, completed: !task.completed };
-        } else {
-          return task;
-        }
-      })
-    );
-    console.log("Task removed!", taskId);
-  };
-
-  const saveTaskToLocalStorage = () => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  };
-  return { tasks, addTask, deleteTask, toggleTaskComplete, editTask };
-};
+//   const saveTaskToLocalStorage = () => {
+//
+//   };
+//   return { tasks, addTask, deleteTask, toggleTaskComplete, editTask };
+// };
