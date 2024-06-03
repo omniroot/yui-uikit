@@ -17,7 +17,7 @@ interface InputProps
   > {
   onChangeCallback?: (text: string) => void;
   onSubmitCallback?: (text: string) => void;
-  initialValue?: string
+  initialValue?: string;
   symbolCount?: boolean;
 }
 export const Input: FC<InputProps> = ({
