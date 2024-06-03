@@ -19,7 +19,8 @@
   - [x] add relative width nad height from content size
   - [x] add onClick animation in Button
   - [ ] add notification (alert) component
-  - [ ] add auto close popup after click
+  - [x] add auto close popup after click
+  - [x] add z-index to popup amd modal
   - [ ] add the ID to the popup component, do a check (if the popup is already open) to avoid 2 or more open popups
   - [x] Refactoring Popup component
   - [x] Rename titleSlot to title in modal component
