@@ -9,40 +9,36 @@ import {
 } from "lucide-react";
 import { FC, useState } from "react";
 import { Modal } from "lib/components/Modal/Modal";
-import { ITask } from "@/store/store";
-import { generateUUID } from "@/utils/generateUuid";
+import { ITask, useGlobalStore } from "@/store/store";
 
 interface ITaskProps {
   task: ITask;
 }
 export const Task: FC<ITaskProps> = ({ task }) => {
+  const { toggleTask, deleteTask, editTask } = useGlobalStore((state) => state);
   const [isEditModal, setIsEditModal] = useState(false);
-  // const { tasks, toggleTaskComplete, deleteTask } = useTasks();
   const [newTask, setNewTask] = useState(task);
 
-  const _toggleModal = () => {
+  const _toggleEditModal = () => {
     console.log("toggle modal");
 
     setIsEditModal((prev) => !prev);
   };
 
-  // const _onEditComplete = () => {
-  //   if (onEditCallback) {
-  //     console.log("On edit Complete");
-  //     onEditCallback(newTask);
-  //     _toggleModal();
-  //   }
-  // };
-
-  const _toggleTaskComplete = () => {
-    toggleTaskComplete(task.id);
+  const _onSaveTaskHandler = () => {
+    editTask(newTask);
+    _toggleEditModal();
   };
 
-  const _onDeleteTask = () => {
+  const _onToggleTaskHandler = () => {
+    toggleTask(task.id);
+  };
+
+  const _onDeleteTaskHandler = () => {
     deleteTask(task.id);
   };
 
-  const _onTitleChange = (text: string) => {
+  const _onTitleChangeHandler = (text: string) => {
     setNewTask((prev) => {
       return { ...prev, title: text };
     });
@@ -53,13 +49,13 @@ export const Task: FC<ITaskProps> = ({ task }) => {
       id: "edit",
       icon: <Pencil />,
       title: "Edit",
-      onClick: _toggleModal,
+      onClick: _toggleEditModal,
     },
     {
       id: "delete",
       icon: <Trash2 />,
       title: "Delete",
-      onClick: _onDeleteTask,
+      onClick: _onDeleteTaskHandler,
     },
   ];
 
@@ -69,7 +65,7 @@ export const Task: FC<ITaskProps> = ({ task }) => {
       <Checkbox
         className={styles.checkbox}
         defaultIsChecked={task.completed}
-        onChangeCallback={_toggleTaskComplete}
+        onChangeCallback={_onToggleTaskHandler}
       >
         <Typography size="h3" className={styles.title}>
           {task.title}
@@ -81,21 +77,23 @@ export const Task: FC<ITaskProps> = ({ task }) => {
         </Popup>
       </div>
       {isEditModal ? (
-        <Portal key={task.id}>
+        <Portal>
           <Modal
             titleSlot="Edit"
             position="center"
             rightSlot={
-              <Button onClick={() => {}} className={styles.save}>
+              <Button onClick={_onSaveTaskHandler} className={styles.save}>
                 Save
               </Button>
             }
-            closeCallback={_toggleModal}
+            closeCallback={_toggleEditModal}
           >
             <div className={styles.editmodal}>
               <Input
                 initialValue={newTask.title}
-                onChangeCallback={_onTitleChange}
+                onChangeCallback={_onTitleChangeHandler}
+                autoFocus
+                key={task.id}
               />
             </div>
           </Modal>

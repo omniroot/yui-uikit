@@ -29,6 +29,10 @@ if (localStorage.getItem("firstStart") === "false") {
 interface IUseStore {
   tasks: ITasks;
   addTask: (newTask: ITaskWithoutId) => void;
+  deleteTask: (taskId: string) => void;
+  toggleTask: (taskId: string) => void;
+  editTask: (task: ITask) => void;
+
   saveTaskToLocalStorage: () => void;
 }
 export const useGlobalStore = create<IUseStore>((set, get) => ({
@@ -36,6 +40,33 @@ export const useGlobalStore = create<IUseStore>((set, get) => ({
   addTask: (newTask: ITaskWithoutId) => {
     set((state) => ({
       tasks: [...state.tasks, { ...newTask, id: generateUUID() }],
+    }));
+  },
+  deleteTask: (taskId: string) => {
+    set((state) => ({
+      tasks: state.tasks.filter((task) => task.id !== taskId),
+    }));
+  },
+  toggleTask: (taskId: string) => {
+    set((state) => ({
+      tasks: state.tasks.map((task) => {
+        if (task.id === taskId) {
+          return { ...task, completed: !task.completed };
+        } else {
+          return task;
+        }
+      }),
+    }));
+  },
+  editTask: (newTask: ITask) => {
+    set((state) => ({
+      tasks: state.tasks.map((task) => {
+        if (task.id === newTask.id) {
+          return newTask;
+        } else {
+          return task;
+        }
+      }),
     }));
   },
   saveTaskToLocalStorage: () => {
