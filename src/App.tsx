@@ -3,10 +3,15 @@ import { Button, Header, Input, Popup, Typography } from "lib";
 import { DoorClosed, Home, MenuIcon, X } from "lucide-react";
 import { Task } from "@/components/Task/Task";
 import { useGlobalStore } from "@/store/store";
+import {
+  ToastContainer,
+  useToast,
+} from "lib/components/ToastContainer/ToastContainer";
 
 function App() {
   const tasks = useGlobalStore((state) => state.tasks);
   const addTask = useGlobalStore((state) => state.addTask);
+  const { toasts, success } = useToast();
 
   const _addTestTask = () => {
     addTask({ title: "Test task", completed: false, tags: ["test"] });
@@ -43,6 +48,10 @@ function App() {
         }
       />
       <Button onClick={_addTestTask}>Add test task</Button>
+      <Button onClick={() => success({ id: "toast", title: "toast" })}>
+        Test toast
+      </Button>
+      <ToastContainer />
       {tasks.map((task) => {
         return <Task task={task} key={task.id} />;
       })}
