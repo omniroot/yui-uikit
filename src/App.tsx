@@ -47,6 +47,7 @@ function App() {
           </Popup>
         }
       />
+      <Typography>Version 0.3.0</Typography>
       <Button onClick={_addTestTask}>Add test task</Button>
       <Button onClick={() => success({ id: "toast", title: "toast" })}>
         Test toast
