@@ -20,7 +20,22 @@ function App() {
   return (
     <div className={styles.App}>
       <Header
-        leftSlot={<Typography size="h2">Yui-kit</Typography>}
+        leftSlot={
+          <div className={styles.headerTitle}>
+
+            <Typography size="h2">Yui-kit</Typography>
+
+
+
+
+            <Typography size="h2"> | </Typography>
+            <Typography size="h2">Version 0.3.0</Typography>
+
+          </div>
+
+
+
+        }
         rightSlot={
           <Popup
             listItems={[
@@ -47,7 +62,7 @@ function App() {
           </Popup>
         }
       />
-      <Typography>Version 0.3.0</Typography>
+
       <Button onClick={_addTestTask}>Add test task</Button>
       <Button onClick={() => success({ id: "toast", title: "toast" })}>
         Test toast
