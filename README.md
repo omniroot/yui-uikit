@@ -17,6 +17,7 @@
 - 0.4.0 version:
   - [ ] add notification (alert) component
   - [ ] add the ID to the popup component, do a check (if the popup is already open) to avoid 2 or more open popups
+  - [ ] separate HeadingTypography to component Heading
 
 
 ## Changelog
