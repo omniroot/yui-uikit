@@ -1,5 +1,4 @@
 import { FC } from "react";
-import styles from "./Toast.module.css";
 
 export interface IToast {
   id: string;

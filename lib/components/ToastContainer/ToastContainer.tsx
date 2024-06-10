@@ -18,7 +18,7 @@ export const useToast = () => {
 };
 
 export const ToastContainer = () => {
-  const { toasts, success } = useToast();
+  const { toasts } = useToast();
 
   return (
     <div className={styles.toastcontainer}>
