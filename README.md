@@ -14,19 +14,10 @@
 
 - Todo:
 
-- 0.3.0 version:
-  - [x] add BaseComponent Type
-  - [x] add relative width nad height from content size
-  - [x] add onClick animation in Button
+- 0.4.0 version:
   - [ ] add notification (alert) component
-  - [x] add auto close popup after click
-  - [x] add z-index to popup amd modal
   - [ ] add the ID to the popup component, do a check (if the popup is already open) to avoid 2 or more open popups
-  - [x] Refactoring Popup component
-  - [x] Rename titleSlot to title in modal component
-  - [x] fix button font, now it use inherit font
-  - [x] fix button width
-  - [x] fix position for popup
+
 
 ## Changelog
 
@@ -40,3 +31,14 @@
   - fix defaultValue for input
   - fix typography type
   - delete span from button
+- 0.3.0 version:
+  - [x] add BaseComponent Type
+  - [x] add relative width nad height from content size
+  - [x] add onClick animation in Button
+  - [x] add auto close popup after click
+  - [x] add z-index to popup amd modal
+  - [x] Refactoring Popup component
+  - [x] Rename titleSlot to title in modal component
+  - [x] fix button font, now it use inherit font
+  - [x] fix button width
+  - [x] fix position for popup
