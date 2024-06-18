@@ -1,40 +1,41 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-	/* Colors */
-	--yui-color-accent: #8884ff;
-	--yui-color-primary: #181616;
-	--yui-color-secondary: #212123;
-	--yui-color-secondary-2: #2d2d30;
-	--yui-color-foreground: var(--yui-color-white);
-	--yui-color-modalbackground: #171718e0;
+  /* Colors */
 
-	--yui-color-white: #f8f9fa;
-	--yui-color-gray: #9c9c9c;
-	--yui-color-darkgray: hsla(152, 85%, 100%, 0.32);
-	--yui-color-darkedgray: hsla(152, 85%, 100%, 0.09);
+  --yui-color-accent: #8884ff;
+  --yui-color-primary: #181616;
+  --yui-color-secondary: #212123;
+  --yui-color-secondary-2: #2d2d30;
+  --yui-color-foreground: var(--yui-color-white);
+  --yui-color-modalbackground: #171718e0;
 
-	--yui-color-lightgreen: #74c69d;
-	--yui-color-green: #3ddc97;
+  --yui-color-white: #f8f9fa;
+  --yui-color-gray: #9c9c9c;
+  --yui-color-darkgray: hsla(152, 85%, 100%, 0.32);
+  --yui-color-darkedgray: hsla(152, 85%, 100%, 0.09);
 
-	--yui-color-darkgreen: #5c946e;
+  --yui-color-lightgreen: #74c69d;
+  --yui-color-green: #3ddc97;
 
-	/* Consts */
-	--yui-radius: 0.5rem;
-	--yui-gap: 0.25rem;
-	--yui-onHover: brightness(120%);
-	--yui-padding-small: 0.25rem;
-	--yui-padding-normal: 0.45rem;
-	--yui-padding-big: 0.65rem;
+  --yui-color-darkgreen: #5c946e;
 
-	--yui-text-size-1: 1.5rem;
-	--yui-text-size-2: 1.2em;
-	--yui-text-size-3: 1em;
-	--yui-text-size-4: 0.8em;
-	--yui-text-size-5: 0.6em;
-	--yui-text-size-6: 0.5em;
+  /* Consts */
+  --yui-radius: 0.5rem;
+  --yui-gap: 0.25rem;
+  --yui-onHover: brightness(120%);
+  --yui-padding-small: 0.25rem;
+  --yui-padding-normal: 0.45rem;
+  --yui-padding-big: 0.65rem;
 
-	font-family: "Open Sans", sans-serif;
+  --yui-text-size-1: 1.5rem;
+  --yui-text-size-2: 1.2em;
+  --yui-text-size-3: 1em;
+  --yui-text-size-4: 0.8em;
+  --yui-text-size-5: 0.6em;
+  --yui-text-size-6: 0.5em;
+
+  font-family: "Open Sans", sans-serif;
 }

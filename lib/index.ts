@@ -1,4 +1,5 @@
 import "./yui-styles.css";
+export {BottomNavigation} from './components/BottomNavigation/BottomNavigation'
 export {Button} from "./components/Button/Button"
 export {Checkbox} from "./components/Checkbox/Checkbox"
 export {ColorPicker} from "./components/ColorPicker/ColorPicker"

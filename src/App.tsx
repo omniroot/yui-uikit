@@ -1,6 +1,6 @@
 import styles from "./App.module.css";
-import { Button, Header, Input, Popup, Typography } from "lib";
-import { DoorClosed, Home, MenuIcon, X } from "lucide-react";
+import { Button, Header, Popup, Typography } from "lib";
+import { DoorClosed, Home, MenuIcon, Settings } from "lucide-react";
 import { Task } from "@/components/Task/Task";
 import { useGlobalStore } from "@/store/store";
 import {
@@ -11,7 +11,7 @@ import {
 function App() {
   const tasks = useGlobalStore((state) => state.tasks);
   const addTask = useGlobalStore((state) => state.addTask);
-  const { toasts, success } = useToast();
+  const { success } = useToast();
 
   const _addTestTask = () => {
     addTask({ title: "Test task", completed: false, tags: ["test"] });
@@ -22,19 +22,11 @@ function App() {
       <Header
         leftSlot={
           <div className={styles.headerTitle}>
-
             <Typography size="h2">Yui-kit</Typography>
-
-
-
 
             <Typography size="h2"> | </Typography>
             <Typography size="h2">Version 0.3.0</Typography>
-
           </div>
-
-
-
         }
         rightSlot={
           <Popup
@@ -53,6 +45,14 @@ function App() {
                 title: "Logout",
                 onClick: () => {
                   console.log("Logout!");
+                },
+              },
+              {
+                id: "3",
+                icon: <Settings size={"24px"} />,
+                title: "Settings",
+                onClick: () => {
+                  console.log("Settings!");
                 },
               },
             ]}
