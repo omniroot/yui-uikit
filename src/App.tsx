@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import { Button, Header, Popup, Typography } from "lib";
+import { BottomNavigation, Button, Header, Popup, Typography } from "lib";
 import { DoorClosed, Home, MenuIcon, Settings } from "lucide-react";
 import { Task } from "@/components/Task/Task";
 import { useGlobalStore } from "@/store/store";
@@ -8,6 +8,11 @@ import {
   useToast,
 } from "lib/components/ToastContainer/ToastContainer";
 
+const bottomNavigationLists = [
+  { id: "mainpage", path: "/", icon: <Home />, title: "MainPage" },
+  { id: "settings", path: "/settings", icon: <Settings />, title: "Settings" },
+];
+
 function App() {
   const tasks = useGlobalStore((state) => state.tasks);
   const addTask = useGlobalStore((state) => state.addTask);
@@ -15,6 +20,10 @@ function App() {
 
   const _addTestTask = () => {
     addTask({ title: "Test task", completed: false, tags: ["test"] });
+  };
+
+  const onBottomNavigationItemClickHandler = (path: string) => {
+    console.log("navigate to ", path);
   };
 
   return (
@@ -71,6 +80,10 @@ function App() {
       {tasks.map((task) => {
         return <Task task={task} key={task.id} />;
       })}
+      <BottomNavigation
+        listItems={bottomNavigationLists}
+        onItemClick={onBottomNavigationItemClickHandler}
+      />
     </div>
   );
 }

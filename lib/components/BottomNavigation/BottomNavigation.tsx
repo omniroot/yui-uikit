@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import styles from "./BottomNavigation.module.css";
-import { Button } from "yui-uikit";
-import { useLocation, useNavigate } from "react-router-dom";
-import clsx from "clsx";
+import { Button } from "lib/components/Button/Button";
 
 interface BottomNavigationListItems {
   id: string;
@@ -13,17 +11,18 @@ interface BottomNavigationListItems {
 
 interface BottomNavigationProps {
   listItems: BottomNavigationListItems[];
+  onItemClick?: (id: string) => void;
 }
 
 const getItemClassName = (currentPath: string, path: string) =>
   currentPath === path ? `${styles.item} ${styles.active}` : styles.item;
 
-export const BottomNavigation: FC<BottomNavigationProps> = ({ listItems }) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
+export const BottomNavigation: FC<BottomNavigationProps> = ({
+  listItems,
+  onItemClick,
+}) => {
   const onItemClickHandler = (path: string) => {
-    navigate(path);
+    onItemClick && onItemClick(path);
   };
 
   return (
