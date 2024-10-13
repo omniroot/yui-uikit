@@ -1,7 +1,7 @@
-
-
 export interface BaseComponent {
-    className?: string;
-    children?: React.ReactNode;
-  
-} 
+  children?: React.ReactNode;
+  className?: string;
+
+  key?: string | number;
+  onClick?: () => void;
+}

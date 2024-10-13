@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import styles from "./BottomNavigation.module.css";
-import { Button } from "yui-uikit";
 import { useLocation, useNavigate } from "react-router-dom";
 import clsx from "clsx";
+import { Button } from "lib/components/Button/Button";
 
 interface BottomNavigationListItems {
   id: string;

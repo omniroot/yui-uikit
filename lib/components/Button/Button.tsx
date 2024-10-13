@@ -1,37 +1,56 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, FC } from "react";
-import styles from "./Button.module.css";
 import clsx from "clsx";
-import { Spinner } from "lib/components/Spinner/Spinner";
+import styles from "./Button.module.css";
+import { BaseComponent } from "lib/types/types";
+import { FC, ReactElement, ReactNode } from "react";
+import { Link } from "react-router-dom";
 
-interface ButtonProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
-  variant?: "primary" | "secondary" | "outline" | "transparent";
-  loading?: boolean;
+interface LinkProps {
+  href?: string;
+  to?: string;
+  variant?: "normal" | "secondary" | "outline";
+  as?: any;
 }
+
+interface ButtonProps extends BaseComponent, LinkProps {}
+
 export const Button: FC<ButtonProps> = ({
-  variant = "primary",
-  loading = false,
-  disabled = false,
-  className,
   children,
+  className,
+  variant = "normal",
+  href,
+  to,
+  as,
   ...rest
 }) => {
-  const _class = clsx(styles.defaultButton, className, {
-    [styles.primaryButton]: variant === "primary",
-    [styles.secondaryButton]: variant === "secondary",
-    [styles.outlineButton]: variant === "outline",
-    [styles.transparentButton]: variant === "transparent",
-    [styles.isLoadingButton]: loading === true,
-    [styles.disabledButton]: disabled === true,
+  const Component = as ? as : "button";
+  const _class = clsx(styles.button, className, {
+    [styles.normal]: variant === "normal",
+    [styles.button_secondary]: variant === "secondary",
+    [styles.button_outline]: variant === "outline",
   });
 
-  return (
-    <button {...rest} className={_class} disabled={disabled || loading}>
-      {loading && <Spinner variant="small" />}
+  // Html link
+  if (href) {
+    return (
+      <a className={_class} {...rest}>
         {children}
+      </a>
+    );
+  }
+
+  // React Router link
+  if (to) {
+    return (
+      <Component className={_class} to={to} {...rest}>
+        {children}
+      </Component>
+    );
+  }
+
+  // Button
+  return (
+    <button className={_class} {...rest}>
+      {children}
     </button>
   );
 };

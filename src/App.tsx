@@ -7,6 +7,7 @@ import {
   ToastContainer,
   useToast,
 } from "lib/components/ToastContainer/ToastContainer";
+import { Link } from "react-router-dom";
 
 function App() {
   const tasks = useGlobalStore((state) => state.tasks);
@@ -64,9 +65,18 @@ function App() {
       />
 
       <Button onClick={_addTestTask}>Add test task</Button>
-      <Button onClick={() => success({ id: "toast", title: "toast" })}>
+      <Button
+        onClick={() => success({ id: "toast", title: "toast" })}
+        // variant="secondary"
+      >
         Test toast
       </Button>
+      <Button>button</Button>
+      <Button href="#href">href</Button>
+      <Button to="/link" as={Link}>
+        to
+      </Button>
+
       <ToastContainer />
       {tasks.map((task) => {
         return <Task task={task} key={task.id} />;
